@@ -12,7 +12,7 @@ with open('linklist.csv', 'r') as csv_file:
         episode_number = row['Episode Number']
         title = row['Title'] if row['Title'] else '[Untitled]'
         url = row['URL']
-        links.append(f"{episode_number}: **Episode {episode_number} - {title}** {url}")
+        links.append(f"{episode_number}: **Episode {episode_number} - {title}** {url} \n")
 
 # Write the content to README.md
 with open('README.md', 'w') as readme_file:

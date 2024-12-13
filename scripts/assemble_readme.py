@@ -10,7 +10,7 @@ with open('linklist.csv', 'r') as csv_file:
     links = []
     for row in csv_reader:
         episode_number = row['Episode Number']
-        title = row['Title'] if row['Title'] else 'Untitled'
+        title = row['Title'] if row['Title'] else '[Untitled]'
         url = row['URL']
         links.append(f"{episode_number}: **Episode {episode_number} - {title}** {url}")
 
@@ -19,4 +19,4 @@ with open('README.md', 'w') as readme_file:
     readme_file.write(intro_content)
     readme_file.write('\n\n## Schooling Globers, Complete YouTube List\n\n')
     for link in links:
-        readme_file.write(f"1. {link}\n")
+        readme_file.write(f"{link}\n")
